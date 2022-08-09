@@ -6,7 +6,8 @@ Feature: Table columns names
 
   @table_columns
   Scenario: Table columns names
-    When user login as a librarian
+    When "librarian" enters valid email address and password
+    And "librarian" click sign in button
     And user click on "Users" link
     Then table should have following column names
       | Actions   |

@@ -1,8 +1,9 @@
-package com.cydeo.library.utilities.utility_driver;
+package com.cydeo.library.utilities;
 
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Properties;
+
 public class ConfigurationReader {
 
     // 1- Create properties object

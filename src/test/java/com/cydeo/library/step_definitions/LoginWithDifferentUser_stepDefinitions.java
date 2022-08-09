@@ -8,8 +8,7 @@ import io.cucumber.java.en.When;
 import org.junit.Assert;
 import org.openqa.selenium.interactions.Actions;
 
-import static com.cydeo.library.utilities.browserUtils.browser.waitFor;
-import static com.cydeo.library.utilities.utility_driver.Login.login;
+import static com.cydeo.library.utilities.utility_driver.useful_method.Login.login;
 
 public class LoginWithDifferentUser_stepDefinitions {
     Library library = new Library();
@@ -26,6 +25,7 @@ public class LoginWithDifferentUser_stepDefinitions {
         System.out.println( "library = " + library.avatar.getText() );
         System.out.println( "name = " + name );
         Assert.assertEquals( "Test failed, mismatch element", library.avatar.getText(), name );
+
     }
 }
 /*

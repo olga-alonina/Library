@@ -14,7 +14,7 @@ Feature: Login with parameters
     And user enter password "wHhJQDSK"
     And click the sign in button
     Then dashboard should be displayed
-    And there should be "148" users
+    And there should be "195" users
 
   @librarian10
   Scenario: Login as librarian same line

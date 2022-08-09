@@ -2,7 +2,7 @@ package com.cydeo.library.step_definitions;
 
 import com.cydeo.library.pages.Authorization;
 import com.cydeo.library.pages.Library;
-import com.cydeo.library.utilities.utility_driver.ConfigurationReader;
+import com.cydeo.library.utilities.ConfigurationReader;
 import com.cydeo.library.utilities.utility_driver.Driver;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -10,15 +10,14 @@ import io.cucumber.java.en.When;
 import org.junit.Assert;
 import org.openqa.selenium.interactions.Actions;
 
-import static com.cydeo.library.utilities.browserUtils.browser.waitFor;
-import static com.cydeo.library.utilities.utility_driver.Login.enter;
-import static com.cydeo.library.utilities.utility_driver.Login.login;
+import static com.cydeo.library.utilities.utility_driver.BrowserUtils.waitFor;
+import static com.cydeo.library.utilities.utility_driver.useful_method.Login.enter;
+import static com.cydeo.library.utilities.utility_driver.useful_method.Login.login;
 
 public class Login_StepDefinitions {
     Authorization authorization = new Authorization();
     Actions actions = new Actions( Driver.getDriver() );
     Library library = new Library();
-
     @Given("user is on the login page")
     public void user_is_on_the_login_page() {
         Driver.getDriver().get( ConfigurationReader.getProperty( "urlLibrary" ) );
